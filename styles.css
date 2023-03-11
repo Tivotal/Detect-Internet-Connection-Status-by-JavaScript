@@ -1,0 +1,107 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+
+.wrapper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  /* animation : show 1s ease forwards */
+}
+
+@keyframes show {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
+
+.wrapper.hide {
+  animation: hide 1s ease forwards;
+}
+
+@keyframes hide {
+  0% {
+    transform: translateX(20%);
+  }
+
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+.wrapper .toast {
+  width: 430px;
+  background-color: #fff;
+  padding: 20px 15px 20px 20px;
+  border-radius: 10px;
+  box-shadow: 1px 7px 15px -7px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 5px solid #2ecc71;
+}
+
+.wrapper .toast.offline {
+  border-color: #ccc;
+}
+
+.toast .content {
+  display: flex;
+  align-items: center;
+}
+
+.toast .content .icon {
+  height: 50px;
+  width: 50px;
+  background-color: #2ecc71;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 25px;
+  color: #fff;
+}
+
+.toast.offline .content .icon {
+  background-color: #ccc;
+}
+
+.toast .content .details {
+  margin-left: 20px;
+}
+
+.toast .content .details span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.toast .content .details p {
+  color: #878787;
+}
+
+.toast .close-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #f2f2f2;
+  font-size: 20px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #878787;
+}
